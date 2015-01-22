@@ -20,7 +20,8 @@ class Bingo extends Application
     
     function index() {
         $this->data['pagebody'] = 'justone';    
-        $this->data = array_merge($this->data,$this->quotes->get(4));
+        //had wrong quote before cause i copied from my other file
+        $this->data = array_merge($this->data,$this->quotes->get(5));
         $this->render();
     }
     //every day im freaken wiser
