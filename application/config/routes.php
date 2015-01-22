@@ -39,14 +39,14 @@
 */
 
 $route['default_controller'] = "welcome";
-$route['sleep'] = 'first/zzz';
-$route['dunno'] = 'guess';// sounds like me.. except guessing doesnt work here
+$route['sleep'] = 'first/zzz'; 
+$route['dunno'] = 'guess';
 $route['lock/(:any)/(:any)'] = 'welcome/shucks/';
 
 $route['show/(:num)'] = 'first/gimme/$1';
 //'/show/3'
 //function gimme($which) 
-//OK.. I THINK ITS LIKE THIS.. (:num) IS LIKE
+//OK.. (:num) IS LIKE
 //      hey, theres a number being passed into this 
 //AND THEN U TAKE THAT AND SAY ITS PASSED INTO
 //'first/gimme/'

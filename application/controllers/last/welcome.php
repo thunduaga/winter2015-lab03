@@ -17,14 +17,11 @@ class Welcome extends Application{
     {
         parent::__construct();
     }
-    //OK
-    //I THINK I MIGHT KNOW WHATS GOING ON HERE AND I DONT LIKE IT
-    //WHY DID I HAVE TO PUT THIS IN A SEPERATE FOLDER 'last'
-    //
     function index() 
     {
-        $this->data['pagebody'] = 'justone';    
+        $this->data['pagebody'] = 'justone';   //this is the view we are using 
         $this->data = array_merge($this->data,$this->quotes->last());
+        //this is the quote we are showing (the last one in the array
         $this->render();
     }
 }
