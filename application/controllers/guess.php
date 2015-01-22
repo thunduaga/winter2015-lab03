@@ -7,20 +7,22 @@
  */
 
 /**
- * Description of last
+ * Description of guess
  *
  * @author Chris
  */
-class Last extends Application{
+class Guess extends Application
+{
     //put your code here
-    function __construct() {
+    function __construct() 
+    {
         parent::__construct();
     }
-    //OK
-    //I THINK I MIGHT KNOW WHATS GOING ON HERE AND I DONT LIKE IT
-    function index() {
-        $this->data['pagebody'] = 'homepage';    
-        $this->data = array_merge($this->data,$this->quotes->last());
+    
+    function index() 
+    {
+        $this->data['pagebody'] = 'justone';    //this took a while
+        $this->data = array_merge($this->data,$this->quotes->get(4));
         $this->render();
     }
 }

@@ -40,6 +40,14 @@
 
 $route['default_controller'] = "welcome";
 $route['sleep'] = 'first/zzz';
+$route['dunno'] = 'guess';// sounds like me.. except guessing doesnt work here
+
+
+
+
+
+
+
 $route['404_override'] = '';
 
 

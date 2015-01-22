@@ -30,6 +30,12 @@ class Welcome extends Application {
 
         $this->render();
     }
+    // dish the second quote (Elayne)
+    function shucks() {
+        $this->data['pagebody'] = 'justone';    // this is the view we want shown
+        $this->data = array_merge($this->data,$this->quotes->get(2));
+        $this->render();
+    }
 
 }
 
