@@ -1,43 +1,42 @@
 <?php
 
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 /**
- * Our homepage. Show a table of all the author pictures. Clicking on one should show their quote.
- * Our quotes model has been autoloaded, because we use it everywhere.
- * 
- * controllers/Welcome.php
+ * Description of Welcome
  *
- * ------------------------------------------------------------------------
+ * @author Chris
  */
 class Welcome extends Application {
 
-    function __construct() {
+    function __construct()
+    {
         parent::__construct();
     }
 
-    //-------------------------------------------------------------
-    //  The normal pages
-    //-------------------------------------------------------------
-
-    function index() {
-        $this->data['pagebody'] = 'homepage';    // this is the view we want shown
-        // build the list of authors, to pass on to our view
+    function index() 
+    {
+        $this->data['pagebody'] = 'homepage';   
         $source = $this->quotes->all();
         $authors = array();
-        foreach ($source as $record) {
+        foreach ($source as $record) 
+        {
             $authors[] = array('who' => $record['who'], 'mug' => $record['mug'], 'href' => $record['where']);
         }
         $this->data['authors'] = $authors;
 
         $this->render();
     }
-    // dish the second quote (Elayne)
-    function shucks() {
-        $this->data['pagebody'] = 'justone';    // this is the view we want shown
+
+    function shucks() 
+    {
+        $this->data['pagebody'] = 'justone';    
         $this->data = array_merge($this->data,$this->quotes->get(2));
         $this->render();
     }
 
 }
-
-/* End of file Welcome.php */
-/* Location: application/controllers/Welcome.php */
