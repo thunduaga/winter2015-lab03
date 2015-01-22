@@ -11,21 +11,31 @@
  *
  * @author Chris
  */
-class First extends Application{
+class First extends Application
+{
     //put your code here
-    function __construct() {
+    function __construct() 
+    {
         parent::__construct();
-}
+    }
 
-    function index() {
+    function index() 
+    {
         $this->data['pagebody'] = 'justone';   //someone told me to do this
         $this->data = array_merge($this->data, $this->quotes->first());
         $this->render();
     }
 
-    function zzz() {
-        $this->data['pagebody'] = 'justone';    // this is for the sleep link
+    function zzz() 
+    {
+        $this->data['pagebody'] = 'justone';   //this is for the sleep remap
         $this->data = array_merge($this->data,$this->quotes->first());
+        $this->render();
+    }
+    function gimme($which) 
+    {
+        $this->data['pagebody'] = 'justone';    //use for gimme/3
+        $this->data = array_merge($this->data,$this->quotes->get($which));
         $this->render();
     }
     
