@@ -21,7 +21,7 @@ class First extends Application
 
     function index() 
     {
-        $this->data['pagebody'] = 'justone';   //someone told me to do this
+        $this->data['pagebody'] = 'justone';   //i needed help doing this
         $this->data = array_merge($this->data, $this->quotes->first());
         $this->render();
     }
