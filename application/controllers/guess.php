@@ -21,7 +21,7 @@ class Guess extends Application
     
     function index() 
     {
-        $this->data['pagebody'] = 'justone';    //this took a while
+        $this->data['pagebody'] = 'justone';    //I THINK ITS WORKING
         $this->data = array_merge($this->data,$this->quotes->get(4));
         $this->render();
     }
