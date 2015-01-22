@@ -43,6 +43,15 @@ $route['sleep'] = 'first/zzz';
 $route['dunno'] = 'guess';// sounds like me.. except guessing doesnt work here
 $route['lock/(:any)'] = 'welcome/shucks';
 
+$route['show/(:num)'] = 'first/gimme/';
+//'/show/3'
+//function gimme($which) 
+//OK.. I THINK ITS LIKE THIS.. (:num) IS LIKE
+//      hey, theres a number being passed into this 
+//AND THEN U TAKE THAT AND SAY ITS PASSED INTO
+//'first/gimme/'
+
+
 $route['^[a-z]{4}/bingo'] = 'bingo';
 //for regular expressions
 //'^[a-z]{4}   MEANS ANY LETTER a-z BUT 4 OF THEM
