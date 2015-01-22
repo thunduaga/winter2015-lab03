@@ -22,7 +22,7 @@ class Welcome extends Application{
     //WHY DID I HAVE TO PUT THIS IN A SEPERATE FOLDER 'last'
     function index() 
     {
-        $this->data['pagebody'] = 'homepage';    
+        $this->data['pagebody'] = 'justone';    
         $this->data = array_merge($this->data,$this->quotes->last());
         $this->render();
     }
