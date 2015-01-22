@@ -20,6 +20,7 @@ class Welcome extends Application{
     //OK
     //I THINK I MIGHT KNOW WHATS GOING ON HERE AND I DONT LIKE IT
     //WHY DID I HAVE TO PUT THIS IN A SEPERATE FOLDER 'last'
+    //
     function index() 
     {
         $this->data['pagebody'] = 'justone';    
