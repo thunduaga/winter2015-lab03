@@ -17,8 +17,14 @@ class First extends Application{
         parent::__construct();
 }
 
-function index() {
-        $this->data['pagebody'] = 'justone';    // this is the view we want shown
+    function index() {
+        $this->data['pagebody'] = 'justone';   //someone told me to do this
+        $this->data = array_merge($this->data, $this->quotes->first());
+        $this->render();
+    }
+
+    function zzz() {
+        $this->data['pagebody'] = 'justone';    // this is for the sleep link
         $this->data = array_merge($this->data,$this->quotes->first());
         $this->render();
     }
