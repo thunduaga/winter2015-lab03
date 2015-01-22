@@ -41,7 +41,7 @@
 $route['default_controller'] = "welcome";
 $route['sleep'] = 'first/zzz';
 $route['dunno'] = 'guess';// sounds like me.. except guessing doesnt work here
-$route['lock/(:num)'] = 'welcome/shucks';
+$route['lock/(:any)'] = 'welcome/shucks';
 
 
 
